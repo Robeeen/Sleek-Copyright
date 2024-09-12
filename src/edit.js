@@ -34,7 +34,7 @@ import './editor.scss';
 import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 
 export default function Edit({ attributes, setAttributes }) {
-	const { showStartingYear, startingYear } = attributes;
+	const { showStartingYear, startingYear, simpleText } = attributes;
 	const current = new Date().getFullYear().toString();
 
 	let displayDate;
@@ -61,11 +61,16 @@ export default function Edit({ attributes, setAttributes }) {
 							onChange={(value) => setAttributes({ startingYear: value })}
 						/>
 					)}
+
+						<TextControl label={__('Developed By')}
+								value={simpleText}
+								onChange={(value) => setAttributes({simpleText: value})}
+						/>
 					
 				</PanelBody>
 			</InspectorControls>
-			<p className='paragraph' {...useBlockProps()}>
-				© {displayDate}
+			<p {...useBlockProps()}>
+				© {displayDate} - {simpleText}
 			</p>
 
 		</>

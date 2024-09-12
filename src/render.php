@@ -12,7 +12,9 @@ if ( ! empty( $attributes['startingYear'] ) && ! empty( $attributes['showStartin
 } else {
     $display_date = $current_year;
 }
+
+
 ?>
 <p <?php echo get_block_wrapper_attributes(); ?>>
-© <?php echo esc_html( $display_date ); ?>
+    CopyRight © <?php echo esc_html( $display_date );?> Developed By: <?php echo $attributes['simpleText']; ?>
 </p>

@@ -9,6 +9,7 @@
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},
 	"supports": {
+		"align": true,
 		"html": false,
 		"color": {
 			"background": true,
@@ -18,14 +19,20 @@
 			"button": true
 		},
 		"typography": {
-			"fontSize": true
+			"fontSize": true,
+			"textAlign": true,
+			"lineHeight": true
 		}
+		
 	},
 	"attributes": {
 		"showStartingYear": {
 			"type": "boolean"
 		},
 		"startingYear": {
+			"type": "string"
+		},
+		"simpleText":{
 			"type": "string"
 		}
 	},
