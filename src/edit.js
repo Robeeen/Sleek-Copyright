@@ -39,21 +39,33 @@ export default function Edit({ attributes, setAttributes }) {
 
 	let displayDate;
 
-	showStartingYear && startingYear ? displayDate = startingYear + '--' + current : displayDate = current;
+	showStartingYear && startingYear ? displayDate = startingYear + ' ~ ' + current : displayDate = current;
 
 	return (
 
 		<>
 			<InspectorControls>
 				<PanelBody title={__('Settings', 'Copyright block')} >
-					<TextControl label={__('Start year')}
-						value={startingYear || ''}
-						onChange={(value) => setAttributes({ startingYear: value })}
-					/>					
+					<ToggleControl
+						checked={!!showStartingYear}
+						label={__('Show Starting Year')}
+						onChange={() => 
+							setAttributes({
+								showStartingYear: !showStartingYear,
+							})
+						}
+					/>
+					{showStartingYear && (
+						<TextControl label={__('Start year')}
+							value={startingYear || ''}
+							onChange={(value) => setAttributes({ startingYear: value })}
+						/>
+					)}
+					
 				</PanelBody>
 			</InspectorControls>
 			<p className='paragraph' {...useBlockProps()}>
-				© {current}
+				© {displayDate}
 			</p>
 
 		</>
