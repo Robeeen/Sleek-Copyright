@@ -70,7 +70,7 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 			<p {...useBlockProps()}>
-				© {displayDate} - {simpleText}
+			CopyRight © {displayDate}    {simpleText}
 			</p>
 
 		</>

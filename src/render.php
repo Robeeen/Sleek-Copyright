@@ -15,6 +15,12 @@ if ( ! empty( $attributes['startingYear'] ) && ! empty( $attributes['showStartin
 
 
 ?>
-<p <?php echo get_block_wrapper_attributes(); ?>>
-    CopyRight © <?php echo esc_html( $display_date );?> Developed By: <?php echo $attributes['simpleText']; ?>
-</p>
+
+<div style="padding: 10px" <?php echo get_block_wrapper_attributes(); ?>>
+
+    CopyRight © <?php echo esc_html( $display_date );?> 
+    <?php
+    if($attributes['simpleText']){
+         echo 'Developed By: ' . $attributes['simpleText']; }
+        ?>
+</div>

@@ -93,7 +93,7 @@ function Edit({
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
       ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-      children: ["\xA9 ", displayDate, " - ", simpleText]
+      children: ["CopyRight \xA9 ", displayDate, "    ", simpleText]
     })]
   });
 }
