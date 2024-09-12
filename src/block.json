@@ -11,9 +11,23 @@
 	"supports": {
 		"html": false,
 		"color": {
-            "background": true,
-            "text": true
-        }
+			"background": true,
+			"text": true,
+			"gradients": true,
+			"heading": true,
+			"button": true
+		},
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"attributes": {
+		"showStartingYear": {
+			"type": "boolean"
+		},
+		"startingYear": {
+			"type": "string"
+		}
 	},
 	"textdomain": "sleek-copyright",
 	"editorScript": "file:./index.js",
