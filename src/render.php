@@ -21,6 +21,6 @@ if ( ! empty( $attributes['startingYear'] ) && ! empty( $attributes['showStartin
     CopyRight © <?php echo esc_html( $display_date );?> 
     <?php
     if($attributes['simpleText']){
-         echo 'Developed By: ' . $attributes['simpleText']; }
+         echo 'Developed and Maintained By: ' . $attributes['simpleText']; }
         ?>
 </div>
